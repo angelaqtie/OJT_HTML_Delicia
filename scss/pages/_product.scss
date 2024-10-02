@@ -1,0 +1,69 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.productBanner {
+  &__wrapper {
+    justify-items: center;
+    @include evenGrid(2, 1fr);
+    place-content: center;
+    // margin: 10rem;
+    gap: 7rem;
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 12em;
+    }
+  }
+
+  .Card1 {
+    @include unevenGrid(15rem 15rem 15rem, 3rem);
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__cardss {
+    padding: 2rem 1rem;
+    border: 2px solid $clr--secondary;
+    border-radius: 2rem;
+  }
+
+  &--details {
+    text-align: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__search {
+    padding: 1rem;
+    background-color: $clr--dark;
+    max-height: 4rem;
+    border-radius: 1rem;
+
+    input {
+      background-color: transparent;
+    }
+  }
+  &__category {
+    padding: 4rem 2rem;
+    background-color: $clr--dark;
+    border-radius: 2rem;
+    margin-top: 2rem;
+
+    span::after {
+      content: " ";
+      display: inline-block;
+      position: relative;
+      background-color: $clr--light;
+      width: 9rem;
+      height: 0.1rem;
+    }
+
+    .kahitano {
+      li {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

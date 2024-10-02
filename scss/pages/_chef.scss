@@ -1,0 +1,28 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.chef {
+  &__wrapper {
+    @include evenGrid(4, 3rem);
+    @include mediaQuery(520px) {
+          grid-template-columns: 1fr;  
+    }
+  }
+  &__cards {
+    text-align: center;
+    padding: 2rem 1rem;
+
+    small {
+      color: $clr--secondary;
+      font-weight: 700;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+
+    img {
+      width: 17rem;
+      border-radius: 2rem;
+    }
+  }
+}
